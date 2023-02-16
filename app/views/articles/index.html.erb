@@ -5,11 +5,17 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
     <td><%= article.description %></td>
+    <td>Show</td>
+    <td>Edit</td>
+    <td>Delete</td>
   </tr>
   <% end %>
 </table>
