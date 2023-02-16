@@ -2,29 +2,8 @@
   Edit Article
 </h1>
 
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+<%= render 'form' %>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-
-  <% if @article.errors.any? %>
-  <ul>
-    <% @article.errors.full_messages.each do |x| %>
-      <li><%= x %></li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 <p>
   <%= link_to 'Cancel Edit', article_path(@article) %> | 
   <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %> | 
