@@ -1,11 +1,9 @@
-<h1>
-  Edit Article
-</h1>
+<div id="page-content">
 
-<%= render 'form' %>
+  <h1 class="text-center mt-4">
+    Edit Article:
+  </h1>
 
-<p>
-  <%= link_to 'Cancel Edit', article_path(@article) %> | 
-  <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %> | 
-  <%= link_to 'Back to Articles List', articles_path %>
-</p>
+  <%= render 'form' %>
+  
+</div>
