@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     @articles = @user.articles
   end
   
+  def index
+    @users = User.all
+  end
+  
   def create
     # This includes whitelisting the params that are passed into the method
     @user = User.new(user_params)
