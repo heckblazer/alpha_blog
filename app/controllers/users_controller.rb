@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     # This includes whitelisting the params that are passed into the method
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:success] = "Welcome to the Place of Many Things #{@user.username}!"
       # redirect_to action: 'index'
       # redirect_to article_path(@article)

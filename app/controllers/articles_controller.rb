@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   def create
     # This includes whitelisting the params that are passed into the method
     @article = Article.new(title_description)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article saved successfully"
       #redirect_to action: 'index'
